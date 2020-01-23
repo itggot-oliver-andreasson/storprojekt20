@@ -7,10 +7,10 @@ Tanken är att ha många-till-många-relation mellan mina recept och ingrediense
 
 ## 2. Vyer (visa bildskisser på dina sidor)
 
-![Sketch](IMG_20200123_151450.jpg)
+![Sketch](IMG_20200123_151501.jpg)
 
 ## 3. Databas med ER-diagram (Bild)
 
-![ER-diagram](IMG_20200123_151501.jpg)
+![ER-diagram](IMG_20200123_151450.jpg)
 
 ## 4. Arkitektur (Beskriv filer och mappar - vad gör/inehåller de?)
