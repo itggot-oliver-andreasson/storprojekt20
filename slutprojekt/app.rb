@@ -5,7 +5,7 @@ require 'bcrypt'
 
 enable :sessions
 
-$db = SQLite3::Database.new('db/lists.db')
+$db = SQLite3::Database.new('db/database.db')
 $db.results_as_hash = true
 
 get('/users/login') do
