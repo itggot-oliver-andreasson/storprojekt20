@@ -8,6 +8,11 @@ enable :sessions
 $db = SQLite3::Database.new('db/database.db')
 $db.results_as_hash = true
 
+get('/') do
+  slim(:startpage)
+end
+
+
 get('/users/login') do
     slim(:"users/login")
   end
