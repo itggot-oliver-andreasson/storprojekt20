@@ -1,0 +1,15 @@
+.loginbox
+    .infobox
+        form class="loginform" action="/loginacc" method="post"
+            div class="form__group field"
+                input type="input" class="form__field" placeholder="username" name="username" required="true"
+                label for="name" class="form__label" username
+            div class="form__group field"
+                input type="password" class="form__field" placeholder="Password" name="password" required="true"
+                label for="password" class="form__label" Password
+
+            input type="submit" class="submitbtn" value="Log in!"/
+        .already
+            p 
+                span Don't have an account? 
+                a href="/register" Register now!
