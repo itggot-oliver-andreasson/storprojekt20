@@ -1,0 +1,242 @@
+.infobox {
+    width: 30%;
+    background: white;
+    border-radius: 15px;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -12px 12px 0 rgba(0, 0, 0, 0.05), 0px 12px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+.infobox h1 {
+    width: 80%;
+    color: var(--text-slightblack);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.infobox a {
+    text-decoration: none;
+    color: var(--darker-blue);
+}
+
+.infobox a:hover {
+    color: #0b2f90;
+}
+
+form.registerform, form.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin: 10px 0;
+    width: 85%;
+}
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--text-slightblack);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+.form__label {
+    position: absolute;
+    top: -2px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--darker-blue), var(--color-blue));
+    border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: -2px;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--darker-blue);
+    font-weight: 700;
+}
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .profile, nav .logout {
+    margin: 1rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile a {
+    margin: 1rem;
+}
+
+.profilebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 3rem auto;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100px;
+    border: 2px #000000 solid;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 1rem;
+}
+
+.userinfo .avatar {
+    width: 150px;
+    height: 150px;
+}
+
+.userinfo .username {
+    font-size: 2rem;
+}
+
+.av {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.createnew {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.recipebox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.createbox {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbox form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formbox input {
+    margin: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.selection {
+    display: flex;
+    flex-direction: column;
+}
+
+.eachrecipe {
+    background: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 30vw;
+}
+
+.eachrecipe .image {
+    width: 100%;
+    height: 250px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.recipeinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.recipeinfo h4 {
+    margin: 0;
+}
+
+
+.ingredientbox ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.amount {
+    margin: .5rem;
+}
+
+.ings {
+    font-weight: 700;
+}
