@@ -1,0 +1,11 @@
+nav
+    h1 Admin: #{admin[0]["username"]}
+    a href="/profile" go back!
+
+li
+    - allusers.each do |user|
+            ul 
+                p = user["username"]
+                form action="/administrator/#{user["id"]}/deleteuser" method="post"
+                    	input type="submit" value="Delete user!"/
+                hr
