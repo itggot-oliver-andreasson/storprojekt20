@@ -1,0 +1,13 @@
+nav
+    a href="/recipes" Go back to shop
+    - if user_data[0]["administrator"] == "1"
+        a href="/administrator" Admin Settings
+.profilebox
+    .userinfo
+        .av
+            .avatar style="background: url('../img/#{user_data[0]["avatar"]}');"
+            a href="/newavatar" Change avatar!
+        .username = user_data[0]["username"]
+    .recipes
+        h1 Uploaded recipes
+    
