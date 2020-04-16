@@ -1,0 +1,41 @@
+nav
+    .profile
+        a href="/profile" Profile
+        .avatar style="background: url('../img/#{user_info[0]["avatar"]}');"
+        p Username: #{user_info[0]["username"]}
+    .logout
+        form action="/logoutform" method="post"
+            input type="submit" value="Logout"/
+
+.main
+    .createnew
+        form action="/createrecipe" method="get"
+            input type="number" name="ingnum" placeholder="Number of ingredients"
+            input type="submit" value="Create new recipes"/
+    .recipebox
+        - recipes[0].each do |recipe|
+            .eachrecipe
+                .image style="background: url('../img/#{recipe["img"]}') no-repeat"
+                .recipeinfo
+                    h2.name = recipe["name"]
+                    h4 How to prepare:
+                    p.desc = recipe["desc"]
+                    h4 Ingredients:
+                    .ingredientbox
+                        ul
+                            - recipes[1].each do |reltable|
+                                - if reltable["recipe_id"] == recipe["recipe_id"]
+                                    - ingredients_ids = reltable["ing_id"].split(",")
+                                    - amount = reltable["amount"].split(",")
+                                    - unit = reltable["unit"].split(",")
+                                    - (0..(ingredients_ids.length-1)).each do |i|
+                                        li
+                                            p.ings = "#{ingredients[ingredients_ids[i].to_i-1]["ing_name"]}:"
+                                            p.amount = amount[i]
+                                            - if unit[i] == "1"
+                                                p.unit = "ml"
+                                            -if unit[i] == "2"
+                                                p.unit = "dash/es"
+
+
+

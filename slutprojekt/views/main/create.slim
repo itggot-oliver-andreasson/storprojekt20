@@ -1,0 +1,21 @@
+.createbox
+    .formbox
+        form action="/recipecreated" method="post" enctype="multipart/form-data"
+            input type="text" name="title" placeholder="Title" required="true"
+            textarea maxlength="500" name="desc" cols="22" rows="5" placeholder="How to make drink..." required="true"
+            .selection
+                - (1..ingnum[0].to_i).each do |i|
+                    h3 = "Ingredient #{i}:"
+                    select name="ingredient#{i}"
+                        option value="ingredient#{i}" required="true" Select Ingredient
+                        - ingredients.each do |ingredient|
+                            option required="true" value="#{ingredient["ing_name"]}" = ingredient["ing_name"]
+                    input type="text" name="amount#{i}" placeholder="Amount" /
+                    select name="measurement#{i}"
+                        option value="Select measurement" required="true" Select measurement
+                        option value="ml" required="true" ml
+                        option value="dash/es" required="true" dash/es
+            h3 Image:
+            input type="file" name="file" required="true"
+            input type="hidden" name="ingnum" value="#{ingnum[0]}"
+            input type="submit" value="Create!" 
