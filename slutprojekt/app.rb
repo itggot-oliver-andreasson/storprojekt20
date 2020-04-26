@@ -294,8 +294,8 @@ end
 # @see Model#deletepost
 post("/recipes/:id/delete") do
 	recipe_id = params[:id]
-    userrecipeinfo = userrecipe(session[:user_id], recipe_id)
-    if userrecipeinfo[1][0]["user_id"] == session[:user_id] || userrecipeinfo[0][0]["admin"] == "1"
+	userrecipeinfo = userrecipe(session[:user_id], recipe_id)
+    if userrecipeinfo[1][0]["user_id"] == session[:user_id] || userrecipeinfo[0][0]["administrator"] == "1"
         deletepost(recipe_id)
     else
         session[:error] = "That is not your post or you are not an admin."
