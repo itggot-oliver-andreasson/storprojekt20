@@ -36,6 +36,14 @@ nav
                                                 p.unit = "ml"
                                             -if unit[i] == "2"
                                                 p.unit = "dash/es"
+                    - if session[:user_id] == recipes[0][0]["user_id"] || user_info[0]["administrator"] == "1"
+                        .delete
+                            form action="/recipes/#{recipe["recipe_id"]}/delete" method="post"
+                                input type="submit" value="Delete recipe!"
+                    - if recipes[0][0]["user_id"] == user_info[0]["id"]
+                        .update
+                            form action="/recipes/#{recipe["recipe_id"]}/update" method="get"
+                                input type="submit" value="Update listing!"/
 
 
 
